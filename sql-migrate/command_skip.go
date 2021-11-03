@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/rubenv/sql-migrate"
+	migrate "github.com/aman00323/sql-migrate"
 )
 
 type SkipCommand struct {

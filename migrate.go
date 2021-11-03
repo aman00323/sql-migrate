@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rubenv/sql-migrate/sqlparse"
+	"github.com/aman00323/sql-migrate/sqlparse"
 	"gopkg.in/gorp.v1"
 )
 
@@ -732,7 +732,7 @@ func (ms MigrationSet) getMigrationDbMap(db *sql.DB, dialect string) (*gorp.DbMa
 
 	// When using the mysql driver, make sure that the parseTime option is
 	// configured, otherwise it won't map time columns to time.Time. See
-	// https://github.com/rubenv/sql-migrate/issues/2
+	// https://github.com/aman00323/sql-migrate/issues/2
 	if dialect == "mysql" {
 		var out *time.Time
 		err := db.QueryRow("SELECT NOW()").Scan(&out)

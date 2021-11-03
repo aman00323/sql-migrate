@@ -1,3 +1,4 @@
+//go:build godror
 // +build godror
 
 // godror is another oracle driver
@@ -9,8 +10,8 @@
 package main
 
 import (
+	migrate "github.com/aman00323/sql-migrate"
 	_ "github.com/godror/godror"
-	migrate "github.com/rubenv/sql-migrate"
 )
 
 func init() {
